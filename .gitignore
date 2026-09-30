@@ -1,0 +1,19 @@
+.venv/
+__pycache__/
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+.env
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Keep mentor-supplied evaluation data local.
+data/evaluation/*
+!data/evaluation/.gitkeep
+
+# Local credentials and OS metadata.
+.env.*
+!.env.example
+.DS_Store
