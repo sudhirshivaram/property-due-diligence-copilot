@@ -42,8 +42,8 @@ were verified to produce identical artifact bytes.
 The inspected source contains 21 documents, 31,055 body paragraphs, 21 tables,
 and 126 source metadata rows. Unclassified headings and source-page navigation
 are retained. Validation establishes fidelity to the DOCX, not legal accuracy or
-Word page rendering. No cleaning, chunking, embeddings, vector storage, retrieval,
-RAG, or evaluation is implemented. Chunk metadata inheritance remains undecided.
+Word page rendering. Stage 1 performs no cleaning, chunking, embeddings, vector storage, retrieval,
+RAG, or evaluation. Chunk metadata inheritance remains undecided.
 
 See [the approved Stage 1 plan](docs/stage-01-ingestion-parsing-plan.md).
 The next stage requires review and approval of the notebook results and artifact.
@@ -63,3 +63,33 @@ ignored by Git. Do not commit private source content or credentials.
 
 Dependencies have compatibility ranges; capture an exact tested lock before
 CI/deployment. This is a learning implementation, not a production ingestion service.
+
+## Stage 2 — Steps 1–12: chunking experiments
+
+Open `notebooks/02_chunking_experiments.ipynb` with the project kernel, then restart
+and run all cells. Steps 1–7 retain the frozen setup, fixed-length and uncapped
+structural baselines, and parent-child alternatives. Step 8 compares exact and
+paragraph/whitespace-aware children inside complete oversized structural parents.
+
+The experiment tests 2,000/4,000/8,000-character triggers, 1,000/2,000-character
+child targets and 0%/10% overlap. It displays affected unit types, measured overlap,
+source maps, cut reasons and matched diagnostics on the same four complete documents.
+Complete parents remain visible as the control. These parameters are experimental
+probes; Step 12 records a provisional shortlist rather than a production strategy. Step 9 adds separate candidate annotations for publication lists and inline amendment
+notes, character-share measurements, and existing-boundary witnesses. Original text
+remains unchanged; no effective-date or legal-status assertions are made.
+Step 10 preserves all document metadata in a source-backed registry and displays
+minimal and selectively joined views of an existing child, with explicit structural,
+relationship and provenance evidence. No production metadata schema is selected.
+Step 11 aligns the frozen samples across existing strategies, records an explicit
+reviewer rubric, then reads mentor excerpts separately for citation/text correspondence.
+Mentor references never enter chunk builders and are not exhaustive ground truth.
+Step 12 tests an evidence-gated hybrid composed from the original structural units
+and Step 8 child spans, with a provisional lead and sensitivity shortlist. It reports
+regressions, validates exact preservation, and writes a local Stage 2 decision summary.
+The notebook stops after Step 12 for review. Embeddings, vector storage, retrieval,
+reranking, RAG, LLM calls and agents remain unimplemented.
+
+Frozen manifests, separate deterministic reports and executed notebooks belong in
+the ignored `data/processed/02_chunking_experiments/` directory. Source notebook
+outputs remain cleared. See the [Stage 2 plan](docs/stage-02-chunking-experiments-plan.md).
