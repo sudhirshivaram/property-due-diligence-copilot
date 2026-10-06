@@ -1,4 +1,10 @@
-# Architecture and incremental plan
+# Historical architecture and incremental plan
+
+> **Superseded structure and numbering:** The mentor’s October 6, 2026 layout
+> and the authorized package refactor are documented in [architecture.md](architecture.md).
+> Current Stage 1 = DOCX ingestion/parsing; Stage 2 = chunking. The table below
+> retains the original Clean/Chunk sequence for historical context only.
+> Its module paths, TXT/PDF scaffold and refactor approval gates are historical.
 
 Repository: `property-due-diligence-copilot`; Python import: `property_copilot`.
 Use a single Python package with a `src/` layout. This keeps imports tied to

@@ -1,7 +1,9 @@
 # Property Investment Due-Diligence Copilot
 
-An incremental, notebook-first project. **Stage 1: document ingestion and parsing**
-is complete. All later stages require separate review and approval.
+An incremental project following the mentor’s package structure. **Stage 1:
+document ingestion/parsing** and **Stage 2: chunking experiments** now run from
+`src/property_copilot/` through thin notebooks. Later application stages remain
+planned. See [the architecture and current folder layout](docs/architecture.md).
 
 ## Run locally
 
@@ -46,9 +48,9 @@ Word page rendering. Stage 1 performs no cleaning, chunking, embeddings, vector 
 RAG, or evaluation. Chunk metadata inheritance remains undecided.
 
 See [the approved Stage 1 plan](docs/stage-01-ingestion-parsing-plan.md).
-The next stage requires review and approval of the notebook results and artifact.
-The [broader project plan](docs/project-plan.md) records the original scaffold
-and future architecture; the approved Stage 1 plan describes the current DOCX work.
+The [broader project plan](docs/project-plan.md) preserves the historical learning
+sequence; [architecture.md](docs/architecture.md) is authoritative for the current
+mentor-aligned layout and Stage 1/Stage 2 numbering.
 
 ## Files kept local
 
@@ -91,5 +93,39 @@ The notebook stops after Step 12 for review. Embeddings, vector storage, retriev
 reranking, RAG, LLM calls and agents remain unimplemented.
 
 Frozen manifests, separate deterministic reports and executed notebooks belong in
-the ignored `data/processed/02_chunking_experiments/` directory. Source notebook
+the ignored `data/processed/02_chunking_experiments/package_refactor_v1/` directory.
+Original experiment reports remain in the parent directory. Source notebook
 outputs remain cleared. See the [Stage 2 plan](docs/stage-02-chunking-experiments-plan.md).
+
+
+## Package and command-line use
+
+Install the package with the setup command above after pulling this refactor.
+The workflows discover the project from the project/notebooks directory, or
+accept an explicit root:
+
+```python
+from property_copilot.ingestion import IngestionWorkflow
+from property_copilot.chunking import ChunkingExperiments, fixed_length_windows
+
+windows = fixed_length_windows("Example source text", length=10, overlap=2)
+# Full reviewed corpus workflows (require the local source archive):
+# ingestion = IngestionWorkflow(root="/path/to/project").run()
+# experiments = ChunkingExperiments(root="/path/to/project").run()
+```
+
+```bash
+property-copilot ingest
+property-copilot chunk
+python -m pytest
+```
+
+`python -m property_copilot.cli` is equivalent to the installed command.
+`build-index` and `run-query` report that those stages are not implemented.
+Copy `.env.example` to `.env` when service credentials are needed; the current
+workflows need none. The optional API shell can be installed with `.[api]` and
+served with `uvicorn property_copilot.api.main:app`; it exposes `/health` only.
+
+See [tests/README.md](tests/README.md) for the optional full private-corpus
+regression. Keep notebook outputs cleared in Git; running cells still displays
+the existing inspection tables and examples.

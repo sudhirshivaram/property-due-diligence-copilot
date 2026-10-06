@@ -1,5 +1,8 @@
 # Stage 1: Document ingestion and parsing
 
+> Implementation update: reusable code now lives in `property_copilot.ingestion`.
+> The notebook is a thin, step-by-step caller; see [architecture.md](architecture.md).
+
 ## Summary and inspection findings
 
 Create `notebooks/01_document_ingestion_parsing.ipynb` as a guided DOCX exploration notebook. Each step will contain an explanation, a small implementation cell, an inspection output, and interpretation notes. Implementation will begin only after your approval.

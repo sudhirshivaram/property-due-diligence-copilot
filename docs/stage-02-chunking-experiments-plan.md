@@ -4,7 +4,9 @@
 
 Create `notebooks/02_chunking_experiments.ipynb` as a guided, reproducible comparison of fixed-length, structural, parent-child, and subsequently hybrid chunking.
 
-The sole corpus-building input will be `data/processed/01_parsed_docx_structure.json`. No implementation or file changes have been made.
+The sole corpus-building input will be `data/processed/01_parsed_docx_structure.json`. This document records the original experiment plan. The implemented notebook now
+imports `property_copilot.chunking`; see [architecture.md](architecture.md) for
+the authorized package refactor.
 
 Repository inspection established:
 
@@ -13,7 +15,7 @@ Repository inspection established:
 - **297 unclassified full-text headings** remain unresolved. Marker candidates are evidence, not an established legal hierarchy.
 - Metadata values retain their original text and source locations.
 - Mentor `corpus/chunks.jsonl`, inside the source archive, contains **94 chunks covering 19 documents**. Its builder uses separate Markdown excerpts; sample chunks include English summaries and generated context prefixes. No `chunks.json` was found in that archive.
-- The broader project plan has older stage numbering. This notebook will follow the user’s current Stage 2 definition.
+- The broader project plan has older stage numbering (Chunk = Stage 3). The mentor’s structure and this notebook use Stage 2 = chunking.
 
 Success means producing inspectable chunks, reproducible comparisons, and evidence-backed recommendations for further validation. It does **not** mean selecting production parameters or establishing retrieval performance.
 
