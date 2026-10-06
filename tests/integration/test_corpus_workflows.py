@@ -31,7 +31,7 @@ def test_thin_notebooks_match_original_results(tmp_path, monkeypatch):
     monkeypatch.chdir(tmp_path)
     monkeypatch.setattr(presentation, "display", lambda *args, **kwargs: None)
     expected = json.loads(
-        (root / "tests/fixtures/refactor_fingerprints.json").read_text()
+        (root / "tests/integration/refactor_fingerprints.json").read_text()
     )
     for notebook_name, fingerprints in expected.items():
         notebook = json.loads((tmp_path / "notebooks" / notebook_name).read_text())

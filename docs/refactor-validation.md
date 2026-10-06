@@ -2,7 +2,7 @@
 
 The original notebooks were executed in an isolated project copy before extracting
 their implementation. Their measured result fingerprints are recorded in
-`tests/fixtures/refactor_fingerprints.json` without private source text.
+`tests/integration/refactor_fingerprints.json` without private source text.
 
 The refactored thin notebook cells were then executed from a fresh temporary
 project with a copy of the same archive. All recorded experiment IDs and result

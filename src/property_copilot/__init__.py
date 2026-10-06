@@ -1,1 +1,1 @@
-"""Reusable components will move here after notebook review."""
+"""Property due-diligence ingestion and chunking workflows."""

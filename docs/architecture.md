@@ -92,8 +92,9 @@ contracts. Planned modules are explicit placeholders, not functioning services.
 Stage 1 retains its exact validated JSON format and output path. Stage 2 preserves
 its source pin, frozen sample manifest, strategy settings, content IDs and result
 fingerprints. Refactored reports are written to
-`data/processed/02_chunking_experiments/package_refactor_v1/` so original reports
-remain available. Hybrid audit provenance now identifies package files and thin
+`data/processed/02_chunking_experiments/package_refactor_v1/` to keep current package outputs separate. Pre-refactor reports, notebook
+recovery copies, the mentor screenshot and obsolete synthetic samples were moved
+to a sibling local cleanup archive, with original paths and SHA-256 checksums. Hybrid audit provenance now identifies package files and thin
 notebooks; consequently its report hash changes even when the hybrid result hash
 does not.
 
@@ -101,7 +102,7 @@ does not.
 The hybrid step checks these files before composing results and again during
 validation. A deliberate code change requires reviewing the differences, rerunning
 the regression checks, and updating the pins. The implementation never silently
-refreshes them. `tests/fixtures/refactor_fingerprints.json` records the original
+refreshes them. `tests/integration/refactor_fingerprints.json` records the original
 notebooks' independently measured result fingerprints.
 
 No database, embedding model, LLM, legal tool or agent is invoked. Future Neon
