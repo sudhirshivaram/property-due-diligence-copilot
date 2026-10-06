@@ -1,3 +1,5 @@
+"""Coordinate the steps."""
+
 from .source import SourceSteps
 from .extraction import ExtractionSteps
 from .boundaries import BoundariesSteps

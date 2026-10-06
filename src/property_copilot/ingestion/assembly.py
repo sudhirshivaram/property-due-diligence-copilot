@@ -1,4 +1,4 @@
-"""Ingestion: assembly."""
+"""Assemble the intermediate corpus."""
 
 from collections import Counter
 from importlib.metadata import version

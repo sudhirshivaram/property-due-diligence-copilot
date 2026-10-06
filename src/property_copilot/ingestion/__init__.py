@@ -1,4 +1,4 @@
-"""Ingestion workflows and reusable helpers."""
+"""Expose IngestionWorkflow."""
 
 from .workflow import IngestionWorkflow
 

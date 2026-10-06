@@ -1,4 +1,4 @@
-"""Ingestion: boundaries."""
+"""Identify documents and structural markers."""
 
 from hashlib import sha256
 from collections import Counter

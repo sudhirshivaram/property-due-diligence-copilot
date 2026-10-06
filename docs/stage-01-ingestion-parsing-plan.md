@@ -1,7 +1,7 @@
 # Stage 1: Document ingestion and parsing
 
 > Implementation update: reusable code now lives in `property_copilot.ingestion`.
-> The notebook is a thin, step-by-step caller; see [architecture.md](architecture.md).
+> The notebook is a thin, step-by-step caller; see [Architecture.md](Architecture.md).
 
 ## Summary and inspection findings
 

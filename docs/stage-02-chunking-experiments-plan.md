@@ -5,7 +5,7 @@
 Create `notebooks/02_chunking_experiments.ipynb` as a guided, reproducible comparison of fixed-length, structural, parent-child, and subsequently hybrid chunking.
 
 The sole corpus-building input will be `data/processed/01_parsed_docx_structure.json`. This document records the original experiment plan. The implemented notebook now
-imports `property_copilot.chunking`; see [architecture.md](architecture.md) for
+imports `property_copilot.chunking`; see [Architecture.md](Architecture.md) for
 the authorized package refactor.
 
 Repository inspection established:

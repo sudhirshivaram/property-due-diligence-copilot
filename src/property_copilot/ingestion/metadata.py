@@ -1,4 +1,4 @@
-"""Ingestion: metadata."""
+"""Classify and preserve metadata."""
 
 from io import BytesIO
 from zipfile import ZipFile

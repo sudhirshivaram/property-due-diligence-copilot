@@ -3,7 +3,7 @@
 An incremental project following the mentor’s package structure. **Stage 1:
 document ingestion/parsing** and **Stage 2: chunking experiments** now run from
 `src/property_copilot/` through thin notebooks. Later application stages remain
-planned. See [the architecture and current folder layout](docs/architecture.md).
+planned. See [the architecture and current folder layout](docs/Architecture.md).
 
 ## Run locally
 
@@ -49,7 +49,7 @@ RAG, or evaluation. Chunk metadata inheritance remains undecided.
 
 See [the approved Stage 1 plan](docs/stage-01-ingestion-parsing-plan.md).
 The [broader project plan](docs/project-plan.md) preserves the historical learning
-sequence; [architecture.md](docs/architecture.md) is authoritative for the current
+sequence; [Architecture.md](docs/Architecture.md) is authoritative for the current
 mentor-aligned layout and Stage 1/Stage 2 numbering.
 
 ## Files kept local

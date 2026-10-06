@@ -33,4 +33,4 @@ Legal correctness, retrieval quality and production readiness are not establishe
 by these refactor checks.
 
 Run instructions are in [tests/README.md](../tests/README.md). The current structure
-and data flow are in [architecture.md](architecture.md).
+and data flow are in [Architecture.md](Architecture.md).

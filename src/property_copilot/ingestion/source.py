@@ -1,4 +1,4 @@
-"""Ingestion: source."""
+"""Load and inspect the DOCX source."""
 
 from io import BytesIO
 from hashlib import sha256

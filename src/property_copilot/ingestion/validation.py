@@ -1,4 +1,4 @@
-"""Ingestion: validation."""
+"""Validate and save the parsed output."""
 
 from pathlib import Path
 from io import BytesIO

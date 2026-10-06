@@ -1,4 +1,4 @@
-"""Ingestion: extraction."""
+"""Extract ordered paragraphs and tables."""
 
 from io import BytesIO
 from hashlib import sha256

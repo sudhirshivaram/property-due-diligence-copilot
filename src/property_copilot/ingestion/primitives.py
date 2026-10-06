@@ -1,4 +1,4 @@
-"""Stateless helpers extracted from the reviewed ingestion notebook."""
+"""Shared helper functions."""
 
 from hashlib import sha256
 from zipfile import ZipFile, BadZipFile
